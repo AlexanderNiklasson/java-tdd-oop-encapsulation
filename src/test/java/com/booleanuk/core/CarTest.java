@@ -3,6 +3,8 @@ package com.booleanuk.core;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.rmi.Remote;
+
 public class CarTest {
 
     /* Test use case 1 */
@@ -19,5 +21,12 @@ public class CarTest {
         Car car = new Car("Blue", new Battery("rechargeable"));
         Assertions.assertTrue(car.replaceBattery(new Battery("disposable")));
 
+    }
+
+    /*Test use case 3*/
+    @Test
+    public void testSwitchingRemotes(){
+        Car car = new Car("Blue", new Battery("rechargeable"), new CarRemote("simple"));
+        Assertions.assertTrue(car.switchRemote(new CarRemote("advanced")));
     }
 }

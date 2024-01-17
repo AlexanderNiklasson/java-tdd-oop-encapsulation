@@ -5,15 +5,19 @@ public class Car {
 
     private String color;
     private Battery battery;
-    public Car(){
+    private CarRemote remote;
 
-    }
     public Car(String color){
         this.color = color;
     }
     public Car(String color, Battery battery){
         this.color = color;
         this.battery = battery;
+    }
+    public Car(String color, Battery battery, CarRemote remote){
+        this.color = color;
+        this.battery = battery;
+        this.remote = remote;
     }
 
     public void setColor(String color){
@@ -31,7 +35,8 @@ public class Car {
             this.battery = battery;
             return true;
         }
-
-
+    }
+    public boolean switchRemote(CarRemote carRemote){
+        return false;
     }
 }
