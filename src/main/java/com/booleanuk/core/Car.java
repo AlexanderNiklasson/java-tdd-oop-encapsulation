@@ -9,7 +9,10 @@ public class Car {
 
     }
 
-    public boolean setColor(String color){
-        return false;
+    public void setColor(String color){
+        this.color = color;
+    }
+    public String getColor(){
+        return this.color;
     }
 }

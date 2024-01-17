@@ -4,10 +4,10 @@
 1. I want to be able to decide on the colour of the car.
 ```
 
-| Classes | Methods                        | Scenario       | Returns |
-|---------|--------------------------------|----------------|---------|
-| Car     | boolean setColor(String color) | Valid string   | true    |
-|         |                                | invalid string | false   |
+| Classes | Methods                     | Scenario               | Returns                    |
+|---------|-----------------------------|------------------------|----------------------------|
+| Car     | void setColor(String color) |                        |                            |
+|         | String getColor()           | Set color and fetch it | Same string as in getColor |
 
 
 ```

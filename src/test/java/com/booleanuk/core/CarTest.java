@@ -9,6 +9,8 @@ public class CarTest {
     @Test
     public void testSettingColorOfCarCorrectly(){
         Car car = new Car();
-        Assertions.assertTrue(car.setColor("Blue"));
+        String color = "Blue";
+        car.setColor(color);
+        Assertions.assertEquals(color, car.getColor());
     }
 }
