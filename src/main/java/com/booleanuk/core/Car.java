@@ -71,4 +71,8 @@ public class Car {
             return true;
         }
     }
+
+    public boolean stopCar(){
+        return false;
+    }
 }

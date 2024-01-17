@@ -52,4 +52,18 @@ public class CarTest {
         Car car = new Car("Blue", new Battery("rechargeable"), new CarRemote("simple"));
         Assertions.assertTrue(car.moveBackwards(100));
     }
+
+    /*Test use case 6*/
+    @Test
+    public void testStoppingCarIfMoving(){
+        Car car = new Car("Blue", new Battery("rechargeable"), new CarRemote("simple"));
+        car.moveForward(100);
+        Assertions.assertTrue(car.stopCar());
+    }
+
+    @Test
+    public void testStoppingCarIfNotMoving(){
+        Car car = new Car("Blue", new Battery("rechargeable"), new CarRemote("simple"));
+        Assertions.assertTrue(car.stopCar());
+    }
 }
