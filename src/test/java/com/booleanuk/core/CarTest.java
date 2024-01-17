@@ -29,4 +29,6 @@ public class CarTest {
         Car car = new Car("Blue", new Battery("rechargeable"), new CarRemote("simple"));
         Assertions.assertTrue(car.switchRemote(new CarRemote("advanced")));
     }
+
+    /*Test use case 4*/
 }

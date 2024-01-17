@@ -1,11 +1,13 @@
 package com.booleanuk.core;
 
+import java.util.Objects;
+
 public class Car {
 
 
     private String color;
     private Battery battery;
-    private CarRemote remote;
+    private CarRemote carRemote;
 
     public Car(String color){
         this.color = color;
@@ -14,10 +16,10 @@ public class Car {
         this.color = color;
         this.battery = battery;
     }
-    public Car(String color, Battery battery, CarRemote remote){
+    public Car(String color, Battery battery, CarRemote carRemote){
         this.color = color;
         this.battery = battery;
-        this.remote = remote;
+        this.carRemote = carRemote;
     }
 
     public void setColor(String color){
@@ -28,7 +30,7 @@ public class Car {
     }
 
     public boolean replaceBattery(Battery battery){
-        if(battery.getType() == this.battery.getType()){
+        if(Objects.equals(battery.getType(), this.battery.getType())){
             return false;
         }
         else{
@@ -37,6 +39,12 @@ public class Car {
         }
     }
     public boolean switchRemote(CarRemote carRemote){
-        return false;
+        if(Objects.equals(carRemote.getType(), this.carRemote.getType())){
+            return false;
+        }
+        else{
+            this.carRemote = carRemote;
+            return true;
+        }
     }
 }
