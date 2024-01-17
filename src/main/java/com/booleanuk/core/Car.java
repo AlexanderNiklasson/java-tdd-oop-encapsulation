@@ -47,4 +47,11 @@ public class Car {
             return true;
         }
     }
+
+    public boolean moveForward(int i){
+        return false;
+    }
+    public boolean moveBackwards(int i){
+        return false;
+    }
 }

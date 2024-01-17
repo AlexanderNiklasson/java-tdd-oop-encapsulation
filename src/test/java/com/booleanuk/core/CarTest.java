@@ -31,4 +31,19 @@ public class CarTest {
     }
 
     /*Test use case 4*/
+    @Test
+    public void testSeeingCapacityOfBattery(){
+        Car car = new Car("Blue", new Battery("rechargeable"), new CarRemote("simple"));
+
+
+
+    }
+
+    /*Test use case 5*/
+    @Test
+    public void testMovingCarForward(){
+        Car car = new Car("Blue", new Battery("rechargeable"), new CarRemote("simple"));
+        Assertions.assertTrue(car.moveForward(100));
+
+    }
 }
