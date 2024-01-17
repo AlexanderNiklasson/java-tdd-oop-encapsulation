@@ -34,7 +34,8 @@ public class CarTest {
     @Test
     public void testSeeingCapacityOfBattery(){
         Car car = new Car("Blue", new Battery("rechargeable"), new CarRemote("simple"));
-
+        car.moveForward(100);
+        Assertions.assertTrue(car.remainingCapacity() == 90);
 
 
     }
@@ -45,5 +46,10 @@ public class CarTest {
         Car car = new Car("Blue", new Battery("rechargeable"), new CarRemote("simple"));
         Assertions.assertTrue(car.moveForward(100));
 
+    }
+    @Test
+    public void testMovingCarBackwards(){
+        Car car = new Car("Blue", new Battery("rechargeable"), new CarRemote("simple"));
+        Assertions.assertTrue(car.moveBackwards(100));
     }
 }

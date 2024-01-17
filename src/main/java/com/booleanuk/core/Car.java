@@ -47,11 +47,28 @@ public class Car {
             return true;
         }
     }
+    public int remainingCapacity(){
+        return this.battery.getCapacity();
+    }
 
     public boolean moveForward(int i){
-        return false;
+        i = i /10;
+        if(i > battery.getCapacity()){
+            return false;
+        }
+        else{
+            battery.drainCapacity(i);
+            return true;
+        }
     }
     public boolean moveBackwards(int i){
-        return false;
+        i = i /10;
+        if(i > battery.getCapacity()){
+            return false;
+        }
+        else{
+            battery.drainCapacity(i);
+            return true;
+        }
     }
 }
