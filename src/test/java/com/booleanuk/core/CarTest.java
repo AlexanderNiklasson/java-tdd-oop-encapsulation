@@ -8,9 +8,16 @@ public class CarTest {
     /* Test use case 1 */
     @Test
     public void testSettingColorOfCarCorrectly(){
-        Car car = new Car();
         String color = "Blue";
-        car.setColor(color);
+        Car car = new Car(color);
         Assertions.assertEquals(color, car.getColor());
+    }
+
+    /*Test use case 2 & 8*/
+    @Test
+    public void testChangingBetweenBatteriesSuccess(){
+        Car car = new Car("Blue", new Battery("rechargeable"));
+        Assertions.assertTrue(car.replaceBattery(new Battery("disposable")));
+
     }
 }
